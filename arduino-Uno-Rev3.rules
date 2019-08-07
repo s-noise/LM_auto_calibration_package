@@ -1,0 +1,9 @@
+SUBSYSTEM!="tty|usb|usb_device|plugdev", GOTO="arduinoUnoRev3_rules_end"
+ACTION!="add", GOTO="arduinoUnoRev3_rules_end"
+
+SUBSYSTEM=="tty", KERNELS=="1-6", SUBSYSTEMS=="usb", ATTRS{idVendor}=="2341", ATTRS{idProduct}=="0043", SYMLINK+="LM_auto_calib_arduino" , GROUP="plugdev"
+
+LABEL="arduinoUnoRev3_rules_end"
+
+
+
