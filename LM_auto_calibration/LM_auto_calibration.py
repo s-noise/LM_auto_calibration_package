@@ -131,6 +131,7 @@ class LMConnectionDelegate:
 
             # wait once until camera is set to play the first time; this prevents (loading) errors on nionswift startup:
             while (not self.__api.get_hardware_source_by_id(self.__hardware_source_id,'1').is_playing) and library == self.__api.library:
+                time.sleep(0.2)
                 pass
             
             #print('start LM auto calibration')                       # message for thread t1 is active          
